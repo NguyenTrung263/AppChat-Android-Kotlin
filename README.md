@@ -21,35 +21,30 @@
 
 ## 📁 Cấu trúc thư mục chính
 app/src/main/java/com/example/appchat/
-│
 ├── 📂 data/                        # TẦNG DỮ LIỆU (DATA LAYER)
 │   ├── 📂 model/                   # Định nghĩa các đối tượng dữ liệu
-│   │   ├── ChatMessage.kt          # Cấu trúc một tin nhắn (senderId, message, timestamp)
-│   │   └── User.kt                 # Cấu trúc thông tin người dùng (uid, email)
-│   │
+│   │   ├── ChatMessage.kt          # Cấu trúc tin nhắn (senderId, message, timestamp)
+│   │   └── User.kt                 # Cấu trúc người dùng (uid, email)
 │   └── 📂 repository/              # Nơi trực tiếp giao tiếp với Firebase
 │       ├── AuthRepository.kt       # Xử lý Đăng ký, Đăng nhập, Đăng xuất
-│       ├── UserRepository.kt       # Lấy danh sách người dùng từ Realtime Database
-│       └── ChatRepository.kt       # Gửi và lắng nghe tin nhắn theo Realtime
+│       ├── UserRepository.kt       # Lấy danh sách người dùng từ Database
+│       └── ChatRepository.kt       # Gửi và lắng nghe tin nhắn Realtime
 │
 ├── 📂 view/                        # TẦNG GIAO DIỆN (UI LAYER)
-│   ├── 📂 auth/                    # Các màn hình liên quan đến xác thực
-│   │   ├── LoginActivity.kt        # Màn hình đăng nhập & đăng ký
-│   │   └── AuthViewModel.kt        # Logic xử lý đăng nhập, báo lỗi UI
-│   │
+│   ├── 📂 auth/                    # Các màn hình xác thực
+│   │   ├── LoginActivity.kt        # Giao diện Đăng nhập & Đăng ký
+│   │   └── AuthViewModel.kt        # Logic xử lý Auth, báo lỗi UI
 │   ├── 📂 user/                    # Màn hình danh sách người dùng
 │   │   ├── UsersActivity.kt        # Hiển thị danh sách bạn bè
-│   │   └── UsersViewModel.kt       # Lấy dữ liệu từ Repo để chuẩn bị cho giao diện
-│   │
+│   │   └── UsersViewModel.kt       # Chuẩn bị dữ liệu cho danh sách
 │   ├── 📂 chat/                    # Màn hình nhắn tin chi tiết
-│   │   ├── ChatActivity.kt         # Giao diện khung chat, nút gửi tin
-│   │   └── ChatViewModel.kt        # Xử lý gửi/nhận tin nhắn liên tục
-│   │
-│   └── 📂 adapter/                 # Các bộ chuyển đổi dữ liệu cho RecyclerView
-│       ├── UsersAdapter.kt         # Hiển thị từng dòng người dùng trong danh sách
-│       └── ChatAdapter.kt          # Hiển thị tin nhắn (phân loại Trái/Phải)
+│   │   ├── ChatActivity.kt         # Giao diện khung chat, nút gửi
+│   │   └── ChatViewModel.kt        # Xử lý luồng gửi/nhận tin nhắn
+│   └── 📂 adapter/                 # Các bộ chuyển đổi cho RecyclerView
+│       ├── UsersAdapter.kt         # Hiển thị từng dòng người dùng
+│       └── ChatAdapter.kt          # Hiển thị tin nhắn (Trái/Phải)
 │
-└── 📂 utils/                       # (Tùy chọn) Các hàm tiện ích dùng chung
+└── 📂 utils/                       # Các hàm tiện ích dùng chung
 
 🔄 Quy trình luân chuyển dữ liệu (Data Flow)
 
