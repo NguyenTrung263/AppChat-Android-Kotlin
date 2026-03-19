@@ -20,6 +20,7 @@
 - **UI Components:** View Binding, RecyclerView, Material Design, CardView.
 
 ## 📁 Cấu trúc thư mục chính
+```
 app/src/main/java/com/example/appchat/
 ├── 📂 data/                        # TẦNG DỮ LIỆU (DATA LAYER)
 │   ├── 📂 model/                   # Định nghĩa các đối tượng dữ liệu
@@ -45,7 +46,7 @@ app/src/main/java/com/example/appchat/
 │       └── ChatAdapter.kt          # Hiển thị tin nhắn (Trái/Phải)
 │
 └── 📂 utils/                       # Các hàm tiện ích dùng chung
-
+```
 🔄 Quy trình luân chuyển dữ liệu (Data Flow)
 
 Quy trình này mô tả cách một tin nhắn được gửi từ thiết bị của bạn, lưu trữ trên đám mây và xuất hiện trên thiết bị của người nhận.
