@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.appchat.databinding.ActivityChatBinding // Đảm bảo tên này khớp với file activity_chat2.xml
+import com.example.appchat.databinding.ActivityChatBinding
 import com.example.appchat.view.adapter.ChatAdapter
 
 class ChatActivity : AppCompatActivity() {
